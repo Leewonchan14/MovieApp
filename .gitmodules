@@ -1,0 +1,3 @@
+[submodule "MovieAppBackend"]
+	path = MovieAppBackend
+	url = https://github.com/Leewonchan14/MovieAppBackend.git
