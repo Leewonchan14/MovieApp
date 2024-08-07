@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import axios from "axios";
+import "./index.css";
 axios.defaults.baseURL = "http://localhost:4000/api"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
