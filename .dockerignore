@@ -1,0 +1,20 @@
+# 공통적으로 제외할 항목들
+node_modules
+dist
+build
+.cache
+.vscode
+.idea
+*.log
+*.env
+.env.*
+.DS_Store
+.git
+coverage
+
+# Vite React 앱 관련
+.vite
+*.tsbuildinfo
+
+# Node.js Express 앱 관련
+npm-debug.log
