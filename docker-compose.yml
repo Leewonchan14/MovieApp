@@ -1,0 +1,47 @@
+services:
+  frontend:
+    build: 
+      target: prod
+      context: ./MovieAppFrontend
+      args:
+        - VITE_BACKEND_BASE_URL=${VITE_BACKEND_BASE_URL}
+    volumes:
+      - ./.env:/.env
+    ports:
+      - "81:80"
+    depends_on:
+      - backend
+      - db
+    restart: always
+    networks:
+      - twoone14
+    
+  backend:
+    build: 
+      context: ./MovieAppBackend
+    volumes:
+      - ./.env:/.env
+    depends_on:
+      - db
+    ports:
+      - 4000:4000
+    env_file:
+      - .env
+
+    networks:
+      - twoone14
+
+    restart: always
+
+  db:
+    image: mysql:latest
+    environment: 
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_DATABASE}  
+    networks:
+      - twoone14
+
+networks:
+  twoone14:
+    external: true
+    name: twoone14
