@@ -1,9 +1,11 @@
 import "./index.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import React from 'react';
+import React from "react";
 import Home, { HOME_PAGE_PATH } from "./pages/Home";
 import AddMovie, { ADD_MOVIE_PAGE_PATH } from "./pages/AddMovie";
 import MovieDetail, { MOVIE_DETAIL_PAGE_PATH } from "./pages/MovieDetail";
+
+console.log(import.meta.env)
 
 function App() {
   return (
