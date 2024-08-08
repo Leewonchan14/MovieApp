@@ -2,6 +2,9 @@ FROM node:18-alpine as build
 
 WORKDIR /app
 
+# Increase Node.js memory limit
+ENV NODE_OPTIONS=--max-old-space-size=4096
+
 COPY ./package.json ./package.json
 
 RUN npm install
