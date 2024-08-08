@@ -5,8 +5,6 @@ import Home, { HOME_PAGE_PATH } from "./pages/Home";
 import AddMovie, { ADD_MOVIE_PAGE_PATH } from "./pages/AddMovie";
 import MovieDetail, { MOVIE_DETAIL_PAGE_PATH } from "./pages/MovieDetail";
 
-console.log(import.meta.env)
-
 function App() {
   return (
     <BrowserRouter>

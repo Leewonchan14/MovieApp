@@ -5,7 +5,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import axios from "axios";
 import "./index.css";
-axios.defaults.baseURL = "http://localhost:4000/api"
+
+axios.defaults.baseURL =
+  import.meta.env.VITE_BACKEND_BASE_URL ?? "http://localhost:4000/api";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
