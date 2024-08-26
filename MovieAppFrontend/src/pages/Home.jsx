@@ -73,7 +73,7 @@ export const DateConverter = (isoDate) => {
   return {
     year: date.getFullYear(),
     month: date.getMonth() + 1,
-    day: date.getDay(),
+    day: date.getDate(),
     hour: date.getHours(),
     minute: date.getMinutes(),
   };
